@@ -2,9 +2,9 @@
 
 Number: 39275811  
 Status: Open  
-Product: iOS + SDK  UIKit
-Product Version: 11.3
-Date Originated: 9 April 2018  
+Product: iOS + SDK  UIKit  
+Product Version: 11.3  
+Date Originated: 9 April 2018    
 
 ## Summary
 
