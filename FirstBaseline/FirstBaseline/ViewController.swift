@@ -34,7 +34,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     let fontSize: CGFloat = 28.0
     let spacing: CGFloat = 8.0
 
@@ -44,7 +43,6 @@ class ViewController: UIViewController {
     }
 
     private func setupViews() {
-
         // Create a horizontal stack view with three text labels.
         // The second text label has a font size twice that of the
         // other two labels making it the tallest of the three labels
@@ -57,7 +55,7 @@ class ViewController: UIViewController {
         stackView.spacing = spacing
 
         // Use a first baseline alignment. The height of the stack view
-        // should be set to the height of the label with the tallest 
+        // should be set to the height of the label with the tallest
         // intrinsic content size (label2).
         stackView.alignment = .firstBaseline
         view.addSubview(stackView)
@@ -73,14 +71,14 @@ class ViewController: UIViewController {
             yellowView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor),
             yellowView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             yellowView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
-            ])
+        ])
 
         // Position stack view so that it is centered and below the top
         // layout guide.
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: spacing),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: spacing),
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-            ])
+        ])
 
         // Add constraints for all but the first labels to make sure the
         // stack view canvas is at least as big as the  biggest text label.
@@ -88,18 +86,18 @@ class ViewController: UIViewController {
         // stack view alignment.
 
         // This would appear to be a bug. The stack view height is set
-        // based on the first label. It does not allow for one of the 
+        // based on the first label. It does not allow for one of the
         // other views being higher.
 
         // Without these constraint the bounds for label2 are outside the
         // frame of the stack view causing it to underlap the top layout
         // guide.
 
-// Uncomment to fix the issue
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(lessThanOrEqualTo: label2.topAnchor),
-            stackView.topAnchor.constraint(lessThanOrEqualTo: label3.topAnchor)
-            ])
+        // Uncomment to fix the issue
+//        NSLayoutConstraint.activate([
+//            stackView.topAnchor.constraint(lessThanOrEqualTo: label2.topAnchor),
+//            stackView.topAnchor.constraint(lessThanOrEqualTo: label3.topAnchor)
+//        ])
     }
 
     private func simpleLabel(title: String, fontSize: CGFloat) -> UILabel {
