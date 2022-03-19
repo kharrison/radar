@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5316AF5227E5FB510074A3C1 /* selection2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = selection2.mp4; sourceTree = "<group>"; };
 		5387898827E235F600986803 /* Items.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Items.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5387898B27E235F600986803 /* ItemsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsApp.swift; sourceTree = "<group>"; };
 		5387898F27E235F900986803 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				53FDDA4527E4E8EA00CBD9D0 /* README.md */,
+				5316AF5227E5FB510074A3C1 /* selection2.mp4 */,
 				53FDDA4627E4E99900CBD9D0 /* Selection.mp4 */,
 				5387898A27E235F600986803 /* Items */,
 				5387898927E235F600986803 /* Products */,
